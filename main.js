@@ -110,13 +110,23 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/api.js":
+/*!********************!*\
+  !*** ./src/api.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   getLocationRelevant: () => (/* binding */ getLocationRelevant)\n/* harmony export */ });\n// api functions\n\nasync function getForecastData(location) {\n  const response = await fetch(\n    `http://api.weatherapi.com/v1/forecast.json?key=cce29fde263d4ad6a8514613232707&q=${location}&days=3&aqi=no&alerts=no`,\n    { mode: \"cors\" }\n  );\n  const jsonData = await response.json();\n  return jsonData;\n}\n\nasync function getCurrentData(location) {\n  const response = await fetch(\n    `http://api.weatherapi.com/v1/current.json?key=cce29fde263d4ad6a8514613232707&q=${location}&aqi=no`,\n    { mode: \"cors\" }\n  );\n  const jsonData = await response.json();\n  return jsonData;\n}\n\nasync function getLocationRelevant(location) {\n  const [forecastData, currentData] = await Promise.all([\n    getForecastData(location),\n    getCurrentData(location),\n  ]);\n  console.log({ forecastData, currentData });\n  // now construct an object with just the useful data to my app.\n}\n\n\n\n\n//# sourceURL=webpack://weather-app/./src/api.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/style.css */ \"./src/assets/style.css\");\n\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/style.css */ \"./src/assets/style.css\");\n/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api */ \"./src/api.js\");\n\n\n\n(0,_api__WEBPACK_IMPORTED_MODULE_1__.getLocationRelevant)(\"London\");\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ })
 
