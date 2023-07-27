@@ -1,4 +1,5 @@
 import "./assets/style.css";
 import { getLocationRelevant } from "./api";
 
-getLocationRelevant("London");
+const object = await getLocationRelevant("London");
+console.log(object);

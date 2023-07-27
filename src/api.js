@@ -23,8 +23,20 @@ async function getLocationRelevant(location) {
     getForecastData(location),
     getCurrentData(location),
   ]);
-  console.log({ forecastData, currentData });
   // now construct an object with just the useful data to my app.
+  console.log({ forecastData });
+  const days = [];
+  for (let i = 0; i < forecastData.forecast.forecastday.length; i++) {
+    const obj = {};
+    obj["temp_c"] = forecastData.forecast.forecastday[i].day.avgtemp_c;
+    obj["temp_f"] = forecastData.forecast.forecastday[i].day.avgtemp_f;
+    obj["condition"] = forecastData.forecast.forecastday[i].day.condition.text;
+    obj["date"] = forecastData.forecast.forecastday[i].date;
+    obj["is_day"] = forecastData.current.is_day;
+
+    days.push(obj);
+  }
+  return days;
 }
 
 export { getLocationRelevant };
