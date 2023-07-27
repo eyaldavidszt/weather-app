@@ -1,0 +1,1 @@
+A weather app to learn how to work with API's, and how to write asynchronous Javascript with promises🥳
