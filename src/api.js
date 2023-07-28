@@ -35,6 +35,7 @@ async function getLocationRelevant(location) {
         forecastData.forecast.forecastday[i].day.condition.text;
       obj["date"] = forecastData.forecast.forecastday[i].date;
       obj["is_day"] = forecastData.current.is_day;
+      obj["icon"] = forecastData.forecast.forecastday[i].day.condition.icon;
 
       days.push(obj);
     }

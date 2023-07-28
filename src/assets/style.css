@@ -1,3 +1,7 @@
+body {
+  font-family: Roboto;
+}
+
 .card-container {
   min-height: 90svh;
   border: 1px solid red;
@@ -12,4 +16,6 @@
   min-width: 300px;
   border: 1px solid green;
   flex: 1;
+  border-radius: 10px;
+  padding: 1rem;
 }
