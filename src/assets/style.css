@@ -75,6 +75,7 @@ button {
   box-shadow: 2px 2px 0px #404040;
   padding: 0.5rem 1rem;
   transition: 0.1s ease;
+  margin-top: 0.25rem;
 }
 
 button:active {
@@ -84,4 +85,8 @@ button:active {
 .today {
   font-size: 3rem;
   font-weight: bold;
+}
+
+form {
+  margin: 1rem;
 }
