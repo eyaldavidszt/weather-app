@@ -3,4 +3,13 @@
   border: 1px solid red;
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  height: 600px;
+  min-width: 300px;
+  border: 1px solid green;
+  flex: 1;
 }
