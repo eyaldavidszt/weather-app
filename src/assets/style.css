@@ -1,11 +1,15 @@
+* {
+  margin: 0;
+}
+
 body {
-  font-family: Roboto;
-  font-size: 1.25rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.5rem;
+  padding: 1rem;
 }
 
 .card-container {
   min-height: 90svh;
-  border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -40,4 +44,30 @@ body {
     rgba(54, 76, 147, 1) 0%,
     rgba(37, 37, 37, 1) 100%
   );
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+button {
+  all: initial;
+  color: white;
+  border-radius: 5px;
+  background-color: #505050;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  box-shadow: 2px 2px 0px #404040;
+  padding: 0.5rem 1rem;
+  transition: 0.1s ease;
+}
+
+button:active {
+  box-shadow: none;
 }
