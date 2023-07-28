@@ -1,6 +1,9 @@
 // functions that create dynamically created dom elements, like weather cards.
 function convertPropertyToDom(property, card, value) {
   if (property === "icon") {
+    const child = document.createElement("img");
+    child.src = value;
+    card.appendChild(child);
   }
   if (property === "is_day") {
   }
