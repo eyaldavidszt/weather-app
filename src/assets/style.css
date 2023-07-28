@@ -1,0 +1,6 @@
+.card-container {
+  min-height: 90svh;
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+}
