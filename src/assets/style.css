@@ -17,6 +17,7 @@ body {
 .card-container {
   min-height: 90svh;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
@@ -78,4 +79,9 @@ button {
 
 button:active {
   box-shadow: none;
+}
+
+.today {
+  font-size: 3rem;
+  font-weight: bold;
 }

@@ -29,20 +29,21 @@ async function getLocationRelevant(location) {
     const days = [];
     for (let i = 0; i < forecastData.forecast.forecastday.length; i++) {
       const obj = {};
-      obj["temp_c"] = forecastData.forecast.forecastday[i].day.avgtemp_c;
-      obj["temp_f"] = forecastData.forecast.forecastday[i].day.avgtemp_f;
-      obj["date"] = forecastData.forecast.forecastday[i].date;
 
       if (i === 0) {
+        obj["today"] = true;
         obj["is_day"] = forecastData.current.is_day;
         obj["icon"] = forecastData.current.condition.icon;
         obj["condition"] = forecastData.current.condition.text;
       } else {
+        obj["date"] = forecastData.forecast.forecastday[i].date;
         obj["is_day"] = "1";
         obj["icon"] = forecastData.forecast.forecastday[i].day.condition.icon;
         obj["condition"] =
           forecastData.forecast.forecastday[i].day.condition.text;
       }
+      obj["temp_c"] = forecastData.forecast.forecastday[i].day.avgtemp_c;
+      obj["temp_f"] = forecastData.forecast.forecastday[i].day.avgtemp_f;
       // obj["name"] = forecastData.location.name;
 
       days.push(obj);

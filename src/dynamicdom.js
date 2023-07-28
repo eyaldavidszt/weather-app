@@ -35,6 +35,13 @@ function convertPropertyToDom(property, card, value) {
     child.textContent = value;
     card.appendChild(child);
   }
+  if (property === "today") {
+    const child = document.createElement("div");
+    child.setAttribute("data", property);
+    child.classList.add("today");
+    child.textContent = "Today";
+    card.insertBefore(child, card.firstChild);
+  }
   // if (property === "name") {
   //   const child = document.createElement("div");
   //   child.setAttribute("data", property);
