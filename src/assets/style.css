@@ -1,10 +1,11 @@
 body {
   font-family: Roboto;
+  font-size: 1.25rem;
 }
 
 .card-container {
   min-height: 90svh;
-  border: 1px solid red;
+  border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -14,11 +15,29 @@ body {
 .card {
   height: 600px;
   min-width: 300px;
-  border: 1px solid green;
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
   padding: 1rem;
+  color: white;
+}
+
+.day {
+  background: rgb(0, 140, 255);
+  background: radial-gradient(
+    circle,
+    rgba(0, 140, 255, 1) 0%,
+    rgba(134, 181, 255, 1) 100%
+  );
+}
+
+.night {
+  background: rgb(54, 76, 147);
+  background: radial-gradient(
+    circle,
+    rgba(54, 76, 147, 1) 0%,
+    rgba(37, 37, 37, 1) 100%
+  );
 }

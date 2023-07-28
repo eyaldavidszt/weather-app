@@ -6,6 +6,11 @@ function convertPropertyToDom(property, card, value) {
     card.appendChild(child);
   }
   if (property === "is_day") {
+    if (value == "1") {
+      card.classList.add("day");
+    } else {
+      card.classList.add("night");
+    }
   }
   if (property === "temp_c" || property === "temp_f") {
     const child = document.createElement("div");
@@ -25,6 +30,10 @@ function convertPropertyToDom(property, card, value) {
     card.appendChild(child);
   }
   if (property === "date") {
+    const child = document.createElement("div");
+    child.setAttribute("data", property);
+    child.textContent = value;
+    card.appendChild(child);
   }
   // if (property === "name") {
   //   const child = document.createElement("div");

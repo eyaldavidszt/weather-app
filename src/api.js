@@ -32,11 +32,13 @@ async function getLocationRelevant(location) {
       obj["temp_c"] = forecastData.forecast.forecastday[i].day.avgtemp_c;
       obj["temp_f"] = forecastData.forecast.forecastday[i].day.avgtemp_f;
       obj["date"] = forecastData.forecast.forecastday[i].date;
+
       if (i === 0) {
         obj["is_day"] = forecastData.current.is_day;
         obj["icon"] = forecastData.current.condition.icon;
         obj["condition"] = forecastData.current.condition.text;
       } else {
+        obj["is_day"] = "1";
         obj["icon"] = forecastData.forecast.forecastday[i].day.condition.icon;
         obj["condition"] =
           forecastData.forecast.forecastday[i].day.condition.text;
